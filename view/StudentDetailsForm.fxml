@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="411.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.royalIstitute.controller.StudentDetailsFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="17.0" prefHeight="36.0" prefWidth="159.0" text="Student Form">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="btngetAll" layoutX="635.0" layoutY="372.0" mnemonicParsing="false" onAction="#btngetAllOnAction" text="Get All" />
+      <TableView fx:id="tblStudent" layoutX="3.0" layoutY="175.0" prefHeight="176.0" prefWidth="712.0">
+        <columns>
+          <TableColumn fx:id="colstudentid" prefWidth="87.0" text="StudentID" />
+          <TableColumn fx:id="colregno" prefWidth="88.0" text="Reg No" />
+            <TableColumn fx:id="colsname" prefWidth="121.0" text="Student Name" />
+            <TableColumn fx:id="colpname" minWidth="0.0" prefWidth="131.0" text="Programme Name" />
+            <TableColumn fx:id="coladdress" minWidth="0.0" prefWidth="122.0" text="Address" />
+            <TableColumn fx:id="colcontact" minWidth="0.0" prefWidth="89.0" text="Contact" />
+            <TableColumn fx:id="colgender" minWidth="0.0" prefWidth="92.0" text="Gender" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnhome" layoutX="645.0" layoutY="35.0" onAction="#homeOnAction" text="Home" />
+      <Separator layoutX="183.0" layoutY="35.0" prefHeight="2.0" prefWidth="452.0" />
+      <JFXComboBox fx:id="cmbCourse" layoutX="15.0" layoutY="72.0" onAction="#cmbCourseOnAction" prefHeight="25.0" prefWidth="627.0" promptText="Course Code" />
+   </children>
+</AnchorPane>

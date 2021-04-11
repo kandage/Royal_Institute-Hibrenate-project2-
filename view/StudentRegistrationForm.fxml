@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="411.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.royalIstitute.controller.StudentRegistrationFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="225.0" text="Registration Form">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Separator layoutX="244.0" layoutY="30.0" prefHeight="0.0" prefWidth="397.0" />
+      <Label alignment="CENTER" layoutX="10.0" layoutY="59.0" prefHeight="40.0" prefWidth="79.0" text="Student ID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtStudentID" layoutX="98.0" layoutY="56.0" />
+      <Label alignment="CENTER" layoutX="450.0" layoutY="61.0" prefHeight="40.0" prefWidth="55.0" text="Date">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXDatePicker fx:id="dtAddedDate" layoutX="518.0" layoutY="67.0" />
+      <Separator layoutX="14.0" layoutY="103.0" prefHeight="3.0" prefWidth="693.0" />
+      <Label alignment="CENTER" layoutX="11.0" layoutY="103.0" prefHeight="40.0" prefWidth="101.0" text="Student Name">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtName" layoutX="144.0" layoutY="105.0" prefHeight="25.0" prefWidth="540.0" />
+      <Label alignment="CENTER" layoutX="14.0" layoutY="143.0" prefHeight="40.0" prefWidth="31.0" text="DOB">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXDatePicker fx:id="dtDOB" layoutX="82.0" layoutY="140.0" />
+      <Label layoutX="359.0" layoutY="142.0" text="Gender">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="rabMale" layoutX="435.0" layoutY="142.0" mnemonicParsing="false" text="Male">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="rabFemale" layoutX="518.0" layoutY="142.0" mnemonicParsing="false" text="Female">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </RadioButton>
+      <Separator layoutX="14.0" layoutY="180.0" prefHeight="3.0" prefWidth="693.0" />
+      <Label alignment="CENTER" layoutX="14.0" layoutY="193.0" prefHeight="40.0" prefWidth="62.0" text="Address">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAddress" layoutX="102.0" layoutY="190.0" prefHeight="25.0" prefWidth="320.0" />
+      <Label alignment="CENTER" layoutX="460.0" layoutY="187.0" prefHeight="40.0" prefWidth="62.0" text="Contact">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtMobileNumber" layoutX="548.0" layoutY="184.0" />
+      <JFXComboBox fx:id="cmbTrainingProgram" labelFloat="true" layoutX="14.0" layoutY="227.0" onAction="#cmdSelectProgram" prefHeight="39.0" prefWidth="135.0" promptText="Tranning Program" />
+      <JFXTextField fx:id="txtProgramID" editable="false" labelFloat="true" layoutX="335.0" layoutY="233.0" prefHeight="37.0" prefWidth="114.0" promptText="Program ID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDuration" editable="false" labelFloat="true" layoutX="174.0" layoutY="233.0" prefHeight="37.0" prefWidth="122.0" promptText="Duration">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtFee" editable="false" labelFloat="true" layoutX="491.0" layoutY="233.0" prefHeight="37.0" prefWidth="101.0" promptText="Fee (LKR)">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnAddProgram" layoutX="627.0" layoutY="233.0" onAction="#btnAddProgram" prefHeight="38.0" prefWidth="62.0" text="Add" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtTotalFee" editable="false" labelFloat="true" layoutX="567.0" layoutY="279.0" prefHeight="31.0" prefWidth="135.0" promptText="Total Fee">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnRemoveProgram" layoutX="566.0" layoutY="323.0" onAction="#btnRemoveProgram" prefHeight="32.0" prefWidth="142.0" text="Remove" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnRegister" layoutX="591.0" layoutY="355.0" onAction="#btnRegister" prefHeight="44.0" prefWidth="101.0" text="Register">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblProgram" layoutX="12.0" layoutY="281.0" prefHeight="123.0" prefWidth="471.0">
+        <columns>
+          <TableColumn fx:id="colProgramID" prefWidth="120.0" text="Programme ID" />
+          <TableColumn fx:id="colProgram" prefWidth="143.0" text="Programme" />
+            <TableColumn fx:id="colDuration" prefWidth="83.0" text="Duration" />
+            <TableColumn fx:id="colFee" minWidth="0.0" prefWidth="124.0" text="Fee" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnhome" layoutX="642.0" layoutY="21.0" onAction="#btnhomeOnAction" text="HOME" />
+   </children>
+</AnchorPane>
